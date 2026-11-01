@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>♚ Ancient Chess · Chaturanga Edition</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/play.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/overlays.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/leaderboard.css">
+  <link rel="stylesheet" href="css/learn.css">
+  <link rel="stylesheet" href="css/train.css">
+  <link rel="stylesheet" href="css/watch.css">
+  <link rel="stylesheet" href="css/community.css">
+  <link rel="stylesheet" href="css/puzzles.css">
+  <link rel="stylesheet" href="css/settings.css">
+  <link rel="stylesheet" href="css/other.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ══════════ DESKTOP SIDEBAR ══════════ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">♞</span>
+      <span class="brand-name">Chaturanga</span>
+    </div>
+    <nav class="nav" id="nav-main" aria-label="Main navigation">
+      
+      <!-- Home -->
+      <button class="nav-item" data-nav="home">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
+      </button>
+
+      <!-- Profile -->
+      <button class="nav-item" data-nav="profile">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <span>Profile</span>
+      </button>
+
+      <!-- Play -->
+      <div class="nav-item-wrapper">
+        <button class="nav-item" data-nav="play">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.53.85l10.5-6.5a1 1 0 0 0 0-1.7L9.53 4.65A1 1 0 0 0 8 5.5z"/></svg>
+          <span>Play</span>
+        </button>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-item" data-nav="play">Play Online</button>
+          <button class="nav-dropdown-item" data-nav="play">Play Bots</button>
+          <button class="nav-dropdown-item" data-nav="play">Play Coach</button>
+          <div style="height:1px;background:rgba(255,255,255,.1);margin:4px 0;"></div>
+          <button class="nav-dropdown-item" data-nav="home">Stats</button>
+          <button class="nav-dropdown-item" data-nav="home">Tournaments</button>
+          <button class="nav-dropdown-item" data-nav="play">Variants</button>
+          <button class="nav-dropdown-item" data-nav="home">Game History</button>
+        </div>
+      </div>
+
+      <!-- Puzzles -->
+      <div class="nav-item-wrapper">
+        <button class="nav-item" data-nav="puzzles">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 11H19V7a2 2 0 0 0-2-2h-4V3.5a2.5 2.5 0 0 0-5 0V5H4a2 2 0 0 0-2 2v4h1.5a2.5 2.5 0 0 1 0 5H2v4a2 2 0 0 0 2 2h4v-1.5a2.5 2.5 0 0 1 5 0V22h4a2 2 0 0 0 2-2v-4h1.5a2.5 2.5 0 0 0 0-5z"/></svg>
+          <span>Puzzles</span>
+        </button>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-item" data-nav="puzzles">Puzzles</button>
+          <button class="nav-dropdown-item" data-nav="puzzles">Daily Puzzle</button>
+          <button class="nav-dropdown-item" data-nav="puzzles">Puzzle Rush</button>
+          <button class="nav-dropdown-item" data-nav="puzzles">Puzzle Battle</button>
+          <button class="nav-dropdown-item" data-nav="puzzles">Custom Puzzles</button>
+        </div>
+      </div>
+
+      <!-- Learn -->
+      <div class="nav-item-wrapper">
+        <button class="nav-item" data-nav="learn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          <span>Learn</span>
+        </button>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-item" data-nav="learn">Lessons</button>
+          <button class="nav-dropdown-item" data-nav="play">Play Coach</button>
+          <button class="nav-dropdown-item" data-nav="learn">Openings</button>
+        </div>
+      </div>
+
+      <!-- Train -->
+      <div class="nav-item-wrapper">
+        <button class="nav-item" data-nav="train">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6l5.25 3.15 1-1.64-4.25-2.51z"/></svg>
+          <span>Train</span>
+        </button>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-item" data-nav="train">Courses</button>
+          <button class="nav-dropdown-item" data-nav="train">Analysis</button>
+          <button class="nav-dropdown-item" data-nav="train">Insights</button>
+          <button class="nav-dropdown-item" data-nav="train">Classroom</button>
+          <button class="nav-dropdown-item" data-nav="train">Endgames</button>
+          <button class="nav-dropdown-item" data-nav="train">Practice</button>
+          <button class="nav-dropdown-item" data-nav="train">Tactics Lab</button>
+        </div>
+      </div>
+
+      <!-- Watch -->
+      <div class="nav-item-wrapper">
+        <button class="nav-item" data-nav="watch">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+          <span>Watch</span>
+        </button>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-item" data-nav="watch">Titled Tuesday 2026</button>
+          <button class="nav-dropdown-item" data-nav="watch">Events</button>
+          <button class="nav-dropdown-item" data-nav="watch">ChessTV</button>
+          <button class="nav-dropdown-item" data-nav="watch">Streamers</button>
+          <button class="nav-dropdown-item" data-nav="watch">Playing Now</button>
+        </div>
+      </div>
+
+      <!-- Community -->
+      <div class="nav-item-wrapper">
+        <button class="nav-item" data-nav="community">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <span>Community</span>
+        </button>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-item" data-nav="community">Friends</button>
+          <button class="nav-dropdown-item" data-nav="community">Clubs</button>
+          <button class="nav-dropdown-item" data-nav="community">Members</button>
+          <button class="nav-dropdown-item" data-nav="community">Coaches</button>
+          <div style="height:1px;background:rgba(255,255,255,.1);margin:4px 0;"></div>
+          <button class="nav-dropdown-item" data-nav="leaderboard">Top Players</button>
+          <button class="nav-dropdown-item" data-nav="leaderboard">Chess Ratings</button>
+          <button class="nav-dropdown-item" data-nav="leaderboard">Leaderboards</button>
+          <div style="height:1px;background:rgba(255,255,255,.1);margin:4px 0;"></div>
+          <button class="nav-dropdown-item" data-nav="home">Chess Today</button>
+          <button class="nav-dropdown-item" data-nav="home">News</button>
+          <button class="nav-dropdown-item" data-nav="home">Articles</button>
+          <button class="nav-dropdown-item" data-nav="home">Blogs</button>
+          <button class="nav-dropdown-item" data-nav="home">Forums</button>
+        </div>
+      </div>
+
+      <!-- Other -->
+      <div class="nav-item-wrapper">
+        <button class="nav-item" data-nav="other">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          <span>Other</span>
+        </button>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-item" data-nav="other">Collections</button>
+          <button class="nav-dropdown-item" data-nav="other">Games Database</button>
+          <button class="nav-dropdown-item" data-nav="other">Chess Terms</button>
+          <button class="nav-dropdown-item" data-nav="other">Rules</button>
+          <button class="nav-dropdown-item" data-nav="other">Explorer</button>
+          <button class="nav-dropdown-item" data-nav="other">Vote Chess</button>
+          <button class="nav-dropdown-item" data-nav="other">Solo Chess</button>
+          <button class="nav-dropdown-item" data-nav="other">Computer Championship</button>
+          <button class="nav-dropdown-item" data-nav="other">Junior Academy</button>
+          <button class="nav-dropdown-item" data-nav="other">Tools</button>
+          <button class="nav-dropdown-item" data-nav="other">Vision</button>
+          <button class="nav-dropdown-item" data-nav="other">Shop / Merch</button>
+          <button class="nav-dropdown-item" data-nav="other">Gift</button>
+        </div>
+      </div>
+
+      <!-- Upgrade -->
+      <div class="nav-item-wrapper" style="margin-top:auto;">
+        <button class="nav-item" style="color:var(--green);">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg>
+          <span>Upgrade</span>
+        </button>
+      </div>
+
+    </nav>
+    <div class="sidebar-footer">
+      <span id="server-status-dot" class="status-dot"></span>
+      <span id="server-status-text">Connecting…</span>
+    </div>
+  </aside>
+
+  <!-- ══════════ MAIN COLUMN ══════════ -->
+  <div class="main-area">
+    <header class="topbar">
+      <div class="topbar-title" id="topbar-title">Profile</div>
+      <div class="topbar-right" id="auth-area"></div>
+    </header>
+
+    <main class="screens">
+
+      <!-- ─────── PROFILE ─────── -->
+      <section id="screen-profile" class="screen active">
+        <div class="profile-layout">
+          <!-- Main Content -->
+          <div class="profile-main">
+            
+            <!-- Profile Header -->
+            <div class="profile-header-card">
+              <div class="profile-avatar-large">♞</div>
+              <div class="profile-info">
+                <h2>HariAcharyakhatri <span style="font-size:16px;">🇮🇳🔥</span></h2>
+                <div class="status-text">Enter a status here ✎</div>
+                <div class="profile-meta-row">
+                  <span>Sep 1, 2025 Joined</span>
+                  <span>0 Friends</span>
+                  <span>2 Views</span>
+                  <span style="color:var(--green);font-weight:600;">Online now</span>
+                </div>
+              </div>
+              <button class="btn secondary small">Edit Profile</button>
+            </div>
+
+            <!-- Tabs -->
+            <div class="profile-tabs">
+              <button class="profile-tab active" data-tab="overview">Overview</button>
+              <button class="profile-tab" data-tab="games">Games</button>
+              <button class="profile-tab" data-tab="stats">Stats</button>
+              <button class="profile-tab" data-tab="friends">Friends</button>
+              <button class="profile-tab" data-tab="awards">Awards</button>
+              <button class="profile-tab" data-tab="clubs">Clubs</button>
+            </div>
+
+            <!-- Tab Content: Overview -->
+            <div id="tab-overview" class="profile-tab-content active">
+              <div class="stat-cards-grid">
+                <div class="stat-card">
+                  <div class="stat-header"><span>⏱️ Rapid</span><span class="stat-change down">↓ 377</span></div>
+                  <div class="stat-value">1404</div>
+                  <div class="sparkline">
+                    <div class="sparkline-bar active" style="height:80%"></div>
+                    <div class="sparkline-bar active" style="height:60%"></div>
+                    <div class="sparkline-bar active" style="height:40%"></div>
+                    <div class="sparkline-bar active" style="height:50%"></div>
+                    <div class="sparkline-bar active" style="height:30%"></div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-header"><span>⚡ Blitz</span><span class="stat-change down">↓ 114</span></div>
+                  <div class="stat-value">843</div>
+                  <div class="sparkline">
+                    <div class="sparkline-bar active" style="height:70%"></div>
+                    <div class="sparkline-bar active" style="height:50%"></div>
+                    <div class="sparkline-bar active" style="height:40%"></div>
+                    <div class="sparkline-bar active" style="height:20%"></div>
+                    <div class="sparkline-bar active" style="height:10%"></div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-header"><span>🚀 Bullet</span><span class="stat-change down">↓ 481</span></div>
+                  <div class="stat-value">691</div>
+                  <div class="sparkline">
+                    <div class="sparkline-bar active" style="height:90%"></div>
+                    <div class="sparkline-bar active" style="height:60%"></div>
+                    <div class="sparkline-bar active" style="height:30%"></div>
+                    <div class="sparkline-bar active" style="height:20%"></div>
+                    <div class="sparkline-bar active" style="height:10%"></div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-header"><span>🧩 Puzzles</span><span class="stat-change up">↑ 410</span></div>
+                  <div class="stat-value">1752</div>
+                  <div class="sparkline">
+                    <div class="sparkline-bar active" style="height:20%"></div>
+                    <div class="sparkline-bar active" style="height:40%"></div>
+                    <div class="sparkline-bar active" style="height:50%"></div>
+                    <div class="sparkline-bar active" style="height:70%"></div>
+                    <div class="sparkline-bar active" style="height:80%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" style="padding:16px;">
+                <div class="field-label">Daily Games (0)</div>
+                <div style="text-align:center;padding:20px;color:var(--text-dim);font-size:14px;">
+                  You don't have active daily games. <button class="btn primary small" style="margin-left:12px;">Play</button>
+                </div>
+              </div>
+
+              <div class="card" style="padding:16px;margin-top:16px;">
+                <div class="field-label">Game History (362)</div>
+                <div class="game-list-item">
+                  <div class="mini-board">
+                    <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                    <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                  </div>
+                  <div class="game-details">
+                    <div class="game-players">
+                      <div class="game-player">Lozzarov <span class="rating">(539) ⚡ -7</span></div>
+                      <div class="game-player">HariAcharyakhatri <span class="rating">(691) ⚡ +7</span></div>
+                    </div>
+                    <div class="game-meta">
+                      <span>📖 Scandinavian Defense</span>
+                      <span>37 moves</span>
+                      <span>Timeout</span>
+                    </div>
+                  </div>
+                  <div class="game-result">
+                    <span class="res-badge loss">0 - 1</span>
+                    <span class="accuracy">72.6%</span>
+                    <span class="date">Oct 4, 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Content: Games -->
+            <div id="tab-games" class="profile-tab-content" style="display:none;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <div style="display:flex;gap:8px;">
+                  <button class="btn small primary">All</button>
+                  <button class="btn small secondary">Favorites</button>
+                  <button class="btn small secondary">Live</button>
+                  <button class="btn small secondary">Daily</button>
+                  <button class="btn small secondary">Bot</button>
+                  <button class="btn small secondary">Coach</button>
+                </div>
+                <input type="text" placeholder="Search games..." style="width:200px;height:36px;font-size:13px;">
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:var(--text-dim);font-size:13px;">
+                <span>All Games (403) ▾</span>
+                <span>Date: Latest First ▾</span>
+              </div>
+              <div id="games-list-container">
+                <!-- Game list items will be populated here -->
+              </div>
+            </div>
+
+            <!-- Tab Content: Stats -->
+            <div id="tab-stats" class="profile-tab-content" style="display:none;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <div style="display:flex;gap:12px;">
+                  <div class="sub-value" style="font-size:13px;padding:8px 14px;">All Stats ▾</div>
+                  <div class="sub-value" style="font-size:13px;padding:8px 14px;">90 days ▾</div>
+                </div>
+                <button class="btn small secondary">Upgrade for Advanced Stats</button>
+              </div>
+              <div class="stats-table">
+                <div class="stats-row header">
+                  <div>Type</div><div>Rating</div><div>Openings</div><div>Tactics</div><div>Strategy</div><div>Endgames</div>
+                </div>
+                <div class="stats-row">
+                  <div class="type-col">⏱️ Rapid</div>
+                  <div class="rating-col">1404</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:60%"></div></div>60%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:40%"></div></div>40%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:30%"></div></div>30%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:20%"></div></div>20%</div>
+                </div>
+                <div class="stats-row">
+                  <div class="type-col">⚡ Blitz</div>
+                  <div class="rating-col">843</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:40%"></div></div>40%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:20%"></div></div>20%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:10%"></div></div>10%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:5%"></div></div>5%</div>
+                </div>
+                <div class="stats-row">
+                  <div class="type-col">🚀 Bullet</div>
+                  <div class="rating-col">691</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:30%"></div></div>30%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:10%"></div></div>10%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:5%"></div></div>5%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:5%"></div></div>5%</div>
+                </div>
+                <div class="stats-row">
+                  <div class="type-col">💡 Brilliant Moves</div>
+                  <div class="rating-col">?</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:15%"></div></div>15%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:25%"></div></div>25%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:5%"></div></div>5%</div>
+                  <div class="progress-col"><div class="progress-bar-bg"><div class="progress-bar-fill" style="width:10%"></div></div>10%</div>
+                </div>
+              </div>
+              <div style="text-align:center;margin-top:12px;">
+                <button class="btn ghost small">Show More Stats ▾</button>
+              </div>
+            </div>
+
+            <!-- Tab Content: Friends -->
+            <div id="tab-friends" class="profile-tab-content" style="display:none;">
+              <div class="card" style="padding:16px;">
+                <div class="field-label">Friends (0)</div>
+                <input type="text" placeholder="Search by name or username" style="width:100%;margin-bottom:20px;">
+                <div class="empty-state">
+                  <div class="icon">♟</div>
+                  <p>Chess is better with friends!</p>
+                  <p style="font-size:13px;color:var(--text-faint);">Add friends and their names will appear here.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Content: Awards -->
+            <div id="tab-awards" class="profile-tab-content" style="display:none;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <div class="field-label">Achievements (28)</div>
+                <button class="btn ghost small">See All →</button>
+              </div>
+              <div class="awards-grid">
+                <div class="award-card">
+                  <div class="award-icon" style="background:#ECEFF1;color:#607D8B;">📰</div>
+                  <div class="award-name">Front Page</div>
+                </div>
+                <div class="award-card">
+                  <div class="award-icon" style="background:#E8F5E9;color:#4CAF50;">1️⃣</div>
+                  <div class="award-name">Happy Anniversary</div>
+                </div>
+                <div class="award-card">
+                  <div class="award-icon" style="background:#FFF3E0;color:#FF9800;">📅</div>
+                  <div class="award-name">Fanatic</div>
+                </div>
+                <div class="award-card">
+                  <div class="award-icon" style="background:#FFF8E1;color:#FFC107;">🧩</div>
+                  <div class="award-name">Puzzle Veteran</div>
+                </div>
+              </div>
+
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <div class="field-label">Books (16)</div>
+                <button class="btn ghost small">See All →</button>
+              </div>
+              <div class="awards-grid" style="grid-template-columns:repeat(auto-fill,minmax(100px,1fr));">
+                <div class="award-card" style="padding:8px;">
+                  <div style="width:100%;aspect-ratio:3/4;background:#F0D9B5;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid #B58863;">♟</div>
+                  <div class="award-name" style="font-size:11px;margin-top:4px;">Réti</div>
+                </div>
+                <div class="award-card" style="padding:8px;">
+                  <div style="width:100%;aspect-ratio:3/4;background:#F0D9B5;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid #B58863;">♟</div>
+                  <div class="award-name" style="font-size:11px;margin-top:4px;">London</div>
+                </div>
+                <div class="award-card" style="padding:8px;">
+                  <div style="width:100%;aspect-ratio:3/4;background:#F0D9B5;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid #B58863;">♟</div>
+                  <div class="award-name" style="font-size:11px;margin-top:4px;">Queen's Gambit</div>
+                </div>
+                <div class="award-card" style="padding:8px;">
+                  <div style="width:100%;aspect-ratio:3/4;background:#F0D9B5;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid #B58863;">♟</div>
+                  <div class="award-name" style="font-size:11px;margin-top:4px;">Slav</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Content: Clubs -->
+            <div id="tab-clubs" class="profile-tab-content" style="display:none;">
+              <div class="card" style="padding:16px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                  <div class="field-label" style="margin:0;">Clubs</div>
+                  <div style="display:flex;gap:8px;">
+                    <button class="btn small secondary">Create a Club</button>
+                  </div>
+                </div>
+                <input type="text" placeholder="Search clubs..." style="width:100%;margin-bottom:20px;">
+                <div class="empty-state">
+                  <div class="icon">🔍</div>
+                  <p>No Clubs yet</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Sidebar -->
+          <div class="profile-sidebar">
+            
+            <div class="sidebar-widget" style="background:linear-gradient(135deg,#1a1a2e,#16213e);border:none;padding:20px;text-align:center;">
+              <div style="font-size:24px;margin-bottom:8px;">🎮</div>
+              <h4 style="font-size:18px;margin-bottom:4px;">Gambit</h4>
+              <p style="font-size:12px;color:var(--text-dim);margin-bottom:12px;">ALL THE POKER. NONE OF THE GAMBLING.</p>
+              <button class="btn primary small w-full">Play Now!</button>
+            </div>
+
+            <div class="sidebar-widget">
+              <h4>Chess Clubs</h4>
+              <div class="sidebar-list-item"><span>📌</span> My Clubs <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🔍</span> Find Clubs <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>⚔️</span> Daily Matches <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🔴</span> Live Matches <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🗳️</span> Vote Chess <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>➕</span> Create a Club <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🏆</span> Leagues <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🌍</span> Federations <span class="chevron">›</span></div>
+            </div>
+
+            <div class="sidebar-widget">
+              <h4>Awards (128)</h4>
+              <div class="sidebar-list-item"><span>🏆</span> Achievements (28) <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🏅</span> Medals (0) <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🎖️</span> Badges (0) <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>👏</span> Cheers (0) <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>📚</span> Books (16) <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>📜</span> Passports (84) <span class="chevron">›</span></div>
+            </div>
+
+            <div class="sidebar-widget">
+              <h4>Friends</h4>
+              <div class="sidebar-list-item"><span>🔗</span> Friend Link <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>🔍</span> Find Friends <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>✉️</span> Email Invite <span class="chevron">›</span></div>
+              <div class="sidebar-list-item"><span>⚔️</span> Challenge Link <span class="chevron">›</span></div>
+            </div>
+
+            <div class="sidebar-widget">
+              <h4>Daily Puzzle</h4>
+              <div style="width:100%;aspect-ratio:1;background:var(--board-light);border-radius:8px;margin-bottom:8px;position:relative;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);overflow:hidden;">
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+              </div>
+              <div style="font-weight:700;color:#fff;font-size:13px;">Beware of the Gift Horse</div>
+              <div style="font-size:11px;color:var(--text-dim);margin-bottom:8px;">Solved by 725,660 players</div>
+              <button class="btn primary small w-full">Solve Daily Puzzle</button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── HOME DASHBOARD ─────── -->
+      <section id="screen-home" class="screen">
+        <div class="home-layout">
+          <div class="left-col" style="display:flex;flex-direction:column;gap:16px;">
+            <div class="card" style="padding:14px;">
+              <div class="field-label">Play Online</div>
+              <div style="display:flex;gap:8px;margin-bottom:12px;">
+                <button class="btn small primary" style="flex:1;">10 min</button>
+                <button class="btn small secondary" style="flex:1;">2 + 1</button>
+                <button class="btn small secondary" style="flex:1;">5 min</button>
+              </div>
+              <button class="btn primary big" onclick="showScreen('play')">Start Game</button>
+              <div style="display:flex;flex-direction:column;gap:6px;margin-top:12px;">
+                <button class="btn secondary w-full" onclick="showScreen('play')">Play Online</button>
+                <button class="btn secondary w-full" onclick="showScreen('play')">Play Bots</button>
+                <button class="btn secondary w-full" onclick="showScreen('play')">Play Coach</button>
+                <button class="btn secondary w-full" onclick="showScreen('play')">Play a Friend</button>
+              </div>
+            </div>
+          </div>
+          <div class="center-col" style="display:flex;flex-direction:column;gap:16px;">
+            <div class="card">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <div class="field-label" style="margin:0;">Game History</div>
+                <button class="btn small ghost">View All</button>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <span style="color:#f44336;font-weight:800;">1</span>
+                    <span style="color:#fff;font-weight:600;">Lozzarov (539)</span>
+                  </div>
+                  <div style="display:flex;gap:12px;font-size:12px;color:var(--text-dim);">
+                    <span>72.6%</span><span>37 moves</span><span>Oct 4</span>
+                  </div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <span style="color:var(--green);font-weight:800;">0</span>
+                    <span style="color:#fff;font-weight:600;">HariAcharyakhatri (691)</span>
+                  </div>
+                  <div style="display:flex;gap:12px;font-size:12px;color:var(--text-dim);">
+                    <span>76.4%</span><span>37 moves</span><span>Oct 3</span>
+                  </div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <span style="color:#f44336;font-weight:800;">1</span>
+                    <span style="color:#fff;font-weight:600;">f0ckTmp (570)</span>
+                  </div>
+                  <div style="display:flex;gap:12px;font-size:12px;color:var(--text-dim);">
+                    <span>Review</span><span>60 moves</span><span>Oct 3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="field-label">Recommended Match</div>
+              <div style="display:flex;align-items:center;gap:14px;">
+                <div style="width:48px;height:48px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;">🐶</div>
+                <div style="flex:1;">
+                  <div style="font-weight:700;color:#fff;">Chaotrope (1727)</div>
+                  <div style="font-size:12px;color:var(--text-dim);">Standard · Rated · 3 days</div>
+                </div>
+                <button class="btn primary small">Challenge</button>
+              </div>
+            </div>
+          </div>
+          <div class="right-col" style="display:flex;flex-direction:column;gap:16px;">
+            <div class="card">
+              <div class="field-label">Daily Puzzle</div>
+              <div style="width:100%;aspect-ratio:1;background:var(--board-light);border-radius:8px;margin-bottom:12px;position:relative;overflow:hidden;">
+                <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);">
+                  <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                  <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                  <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                  <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                  <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                  <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                  <div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div>
+                  <div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div><div style="background:var(--board-dark);"></div><div style="background:var(--board-light);"></div>
+                </div>
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:32px;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.5);">♕</div>
+              </div>
+              <div style="font-weight:700;color:#fff;margin-bottom:4px;">Beware of the Gift Horse</div>
+              <div style="font-size:12px;color:var(--text-dim);margin-bottom:12px;">Solved by 725,660 players</div>
+              <button class="btn primary w-full">Solve Daily Puzzle</button>
+            </div>
+            <div class="card">
+              <div class="field-label">Stats</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim);">Games</span><span style="font-weight:700;">362</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim);">Puzzles</span><span style="font-weight:700;">1,767</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim);">Rapid</span><span style="font-weight:700;color:var(--green);">1404</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim);">Blitz</span><span style="font-weight:700;">843</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim);">Bullet</span><span style="font-weight:700;">691</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim);">Puzzles</span><span style="font-weight:700;">1752</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── PLAY HUB ─────── -->
+      <section id="screen-play" class="screen">
+        <div class="play-layout">
+          <div class="preview-col">
+            <canvas id="preview-board" class="preview-canvas" width="440" height="440" aria-hidden="true"></canvas>
+          </div>
+
+          <div class="play-card">
+            <div class="variant-switch" role="tablist" aria-label="Variant">
+              <button class="variant-btn active" data-variant="standard" role="tab" aria-selected="true">Standard Chess</button>
+              <button class="variant-btn" data-variant="chaturanga" role="tab" aria-selected="false">Ancient Chaturanga</button>
+            </div>
+
+            <div class="mode-tabs" role="tablist" aria-label="Play mode">
+              <button class="mode-tab active" data-mode="online" role="tab" aria-selected="true">Online</button>
+              <button class="mode-tab" data-mode="bots" role="tab" aria-selected="false">Bots</button>
+              <button class="mode-tab" data-mode="local" role="tab" aria-selected="false">Pass &amp; Play</button>
+            </div>
+
+            <!-- ══ ONLINE ══ -->
+            <div class="panel-section active" id="panel-online" role="tabpanel">
+              <div class="tc-wrap">
+                <div class="field-label">Time control</div>
+                <button class="tc-button" id="tc-button" aria-haspopup="listbox" aria-expanded="false">
+                  <span id="tc-label">10 min</span>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <div class="tc-dropdown" id="tc-dropdown" role="listbox" hidden></div>
+              </div>
+
+              <button class="btn primary big" id="btn-quick-match">Play</button>
+
+              <div class="friend-block">
+                <button class="btn secondary w-full" id="btn-play-friend" aria-expanded="false">Play a Friend</button>
+
+                <div class="friend-panel" id="friend-panel" hidden>
+                  <div>
+                    <div class="field-label">I play as</div>
+                    <div class="seg" id="friend-color">
+                      <button data-color="white">White</button>
+                      <button data-color="random" class="active">Random</button>
+                      <button data-color="black">Black</button>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="field-label">Time control</div>
+                    <div class="sub-value" id="friend-tc-label">10 min</div>
+                  </div>
+                  <button class="btn primary w-full" id="btn-create-room">Create Game</button>
+                </div>
+
+                <div class="friend-waiting" id="friend-waiting" hidden>
+                  <div>
+                    <div class="field-label" style="margin-bottom:6px;">Room code</div>
+                    <div class="room-code-row">
+                      <code id="room-code">—</code>
+                      <button class="btn small secondary" id="btn-copy-room">Copy</button>
+                    </div>
+                  </div>
+                  <div class="waiting-line">
+                    <span class="spinner-sm"></span>
+                    <span>Waiting for opponent…</span>
+                  </div>
+                  <button class="btn secondary small" id="btn-cancel-room">Cancel</button>
+                </div>
+
+                <div class="join-row">
+                  <input id="join-code" type="text" placeholder="Join with code" aria-label="Room code" autocomplete="off" />
+                  <button class="btn secondary" id="btn-join-code">Join</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ══ BOTS ══ -->
+            <div class="panel-section" id="panel-bots" role="tabpanel">
+              <div class="bot-grid" id="bot-grid"></div>
+              <div class="bot-setup" id="bot-setup" hidden>
+                <div class="setup-row">
+                  <div class="field-label">I play as</div>
+                  <div class="seg" id="bot-color">
+                    <button data-color="white" class="active">White</button>
+                    <button data-color="random">Random</button>
+                    <button data-color="black">Black</button>
+                  </div>
+                </div>
+                <label class="switch-row">
+                  <input type="checkbox" id="assist-toggle" />
+                  <span>Assistance (hints + undo)</span>
+                </label>
+                <button class="btn primary big" id="btn-start-bot">Play</button>
+              </div>
+              <p class="hint-text mt-12" id="bot-hint">Pick an opponent to continue. Bot games have no clock.</p>
+            </div>
+
+            <!-- ══ PASS & PLAY ══ -->
+            <div class="panel-section" id="panel-local" role="tabpanel">
+              <label class="switch-row">
+                <input type="checkbox" id="flip-toggle" />
+                <span>Flip board after each move</span>
+              </label>
+              <p class="hint-text mt-8">Two players share one device. No clock is used.</p>
+              <button class="btn primary big mt-12" id="btn-start-local">Start Game</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── PUZZLES ─────── -->
+      <section id="screen-puzzles" class="screen">
+        <div class="page">
+          <h2>Puzzles</h2>
+          <div class="card" style="text-align:center;">
+            <p class="subtitle">Puzzle trainer arrives in Phase 4 of the rebuild.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── LEARN ─────── -->
+      <section id="screen-learn" class="screen">
+        <div class="learn-layout">
+          <div class="card" style="padding:24px;">
+            <h2 style="text-align:left;margin-bottom:20px;">Learn</h2>
+            <div class="lesson-path">
+              <div class="lesson-node completed">♟</div>
+              <div class="lesson-connector active"></div>
+              <div class="lesson-node completed">♞</div>
+              <div class="lesson-connector active"></div>
+              <div class="lesson-node active">♝</div>
+              <div class="lesson-connector"></div>
+              <div class="lesson-node">♜</div>
+              <div class="lesson-connector"></div>
+              <div class="lesson-node">♛</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="field-label">Master Chess Through Spaced Repetition</div>
+            <p class="hint-text" style="margin-bottom:16px;">Our intelligent system tracks your mistakes and resurfaces them at optimal intervals to maximize retention.</p>
+            <button class="btn primary w-full">Explore Courses</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── TRAIN ─────── -->
+      <section id="screen-train" class="screen">
+        <div class="page" style="max-width:900px;">
+          <h2 style="text-align:left;margin-bottom:20px;">Train</h2>
+          <div class="card-grid">
+            <div class="feature-card">
+              <div class="card-top" style="color:#4CAF50;">📚</div>
+              <div class="card-bottom">
+                <h4>Courses</h4>
+                <p>Learn from your favorite chess players</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="color:#2196F3;">🔍</div>
+              <div class="card-bottom">
+                <h4>Analysis</h4>
+                <p>Find the best move in any chess position</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="color:#FFC107;">💡</div>
+              <div class="card-bottom">
+                <h4>Insights</h4>
+                <p>Get analytics based on your game history</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="color:#9C27B0;">🏫</div>
+              <div class="card-bottom">
+                <h4>Classroom</h4>
+                <p>Collaborate on a shared chessboard</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="color:#FF5722;">♟</div>
+              <div class="card-bottom">
+                <h4>Endgames</h4>
+                <p>Practice endgames</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="color:#00BCD4;">🎯</div>
+              <div class="card-bottom">
+                <h4>Practice</h4>
+                <p>Sharpen your tactical vision</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── WATCH ─────── -->
+      <section id="screen-watch" class="screen">
+        <div class="watch-layout">
+          <div>
+            <div class="video-player">
+              <div class="board-preview"></div>
+              <div style="position:absolute;bottom:16px;left:16px;display:flex;align-items:center;gap:12px;">
+                <div style="width:40px;height:40px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:20px;">👩</div>
+                <div>
+                  <div style="font-weight:700;color:#fff;">Sunday Stream</div>
+                  <div style="font-size:12px;color:var(--text-dim);">43 watching</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:16px;">
+              <h3 style="color:#fff;margin-bottom:8px;">Live Events</h3>
+              <div style="display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;">
+                <div style="min-width:200px;background:var(--bg-panel);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.08);">
+                  <div style="font-weight:700;color:#fff;">Titled Tuesday 2026</div>
+                  <div style="font-size:12px;color:var(--green);margin-top:4px;">Live Now</div>
+                </div>
+                <div style="min-width:200px;background:var(--bg-panel);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.08);">
+                  <div style="font-weight:700;color:#fff;">Ancient Chess Championship</div>
+                  <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Starts in 2h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="streamer-list">
+            <h4 style="color:#fff;margin-bottom:12px;">Streamers</h4>
+            <div class="streamer-item">
+              <div class="streamer-avatar">👩</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;color:#fff;font-size:14px;">Witty_Alien</div>
+                <div style="font-size:12px;color:var(--text-dim);">309 viewers</div>
+              </div>
+            </div>
+            <div class="streamer-item">
+              <div class="streamer-avatar">👨</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;color:#fff;font-size:14px;">Sham211</div>
+                <div style="font-size:12px;color:var(--text-dim);">202 viewers</div>
+              </div>
+            </div>
+            <div class="streamer-item">
+              <div class="streamer-avatar">🧑</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;color:#fff;font-size:14px;">Jessejames88TX</div>
+                <div style="font-size:12px;color:var(--text-dim);">136 viewers</div>
+              </div>
+            </div>
+            <div class="streamer-item">
+              <div class="streamer-avatar">👩</div>
+              <div style="flex:1;">
+                <div style="font-weight:700;color:#fff;font-size:14px;">DianaMirza</div>
+                <div style="font-size:12px;color:var(--text-dim);">112 viewers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── COMMUNITY ─────── -->
+      <section id="screen-community" class="screen">
+        <div class="page" style="max-width:900px;">
+          <h2 style="text-align:left;margin-bottom:20px;">Community</h2>
+          
+          <h4 style="color:var(--text-dim);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;margin-left:4px;">Connect</h4>
+          <div class="card-grid" style="margin-bottom:24px;">
+            <div class="feature-card">
+              <div class="card-top" style="background:#F3E5F5;color:#9C27B0;">👥</div>
+              <div class="card-bottom">
+                <h4>Friends</h4>
+                <p>Find and add friends</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#E8F5E9;color:#4CAF50;">🛡️</div>
+              <div class="card-bottom">
+                <h4>Clubs</h4>
+                <p>Join and compete in Chess clubs</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#E3F2FD;color:#2196F3;">🌍</div>
+              <div class="card-bottom">
+                <h4>Members</h4>
+                <p>Search and find players across the world</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#FFF3E0;color:#FF9800;">🧑‍🏫</div>
+              <div class="card-bottom">
+                <h4>Coaches</h4>
+                <p>Find a coach to help you improve</p>
+              </div>
+            </div>
+          </div>
+
+          <h4 style="color:var(--text-dim);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;margin-left:4px;">Players</h4>
+          <div class="card-grid">
+            <div class="feature-card">
+              <div class="card-top" style="background:#FFEBEE;color:#F44336;">👑</div>
+              <div class="card-bottom">
+                <h4>Top Players</h4>
+                <p>Learn about the best players in the world</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#E0F7FA;color:#00BCD4;">📊</div>
+              <div class="card-bottom">
+                <h4>Chess Rankings</h4>
+                <p>See player ratings for competitive formats</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#FFF8E1;color:#FFC107;">🏆</div>
+              <div class="card-bottom">
+                <h4>Leaderboards</h4>
+                <p>See player rankings for Ancient Chess formats</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── OTHER ─────── -->
+      <section id="screen-other" class="screen">
+        <div class="page" style="max-width:900px;">
+          <h2 style="text-align:left;margin-bottom:20px;">Other</h2>
+          <div class="card-grid">
+            <div class="feature-card">
+              <div class="card-top" style="background:#E8F5E9;color:#4CAF50;">📁</div>
+              <div class="card-bottom">
+                <h4>Collections</h4>
+                <p>Save games in collections for further study</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#FFF3E0;color:#FF9800;">🗄️</div>
+              <div class="card-bottom">
+                <h4>Games Database</h4>
+                <p>Explore millions of master chess games</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#E3F2FD;color:#2196F3;">📖</div>
+              <div class="card-bottom">
+                <h4>Chess Terms</h4>
+                <p>Get familiar with the terminology of chess</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#F3E5F5;color:#9C27B0;">📜</div>
+              <div class="card-bottom">
+                <h4>Rules</h4>
+                <p>Learn the rules and the basics of chess</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#ECEFF1;color:#607D8B;">🧭</div>
+              <div class="card-bottom">
+                <h4>Explorer</h4>
+                <p>Explore moves on your own</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#E0F2F1;color:#009688;">🗳️</div>
+              <div class="card-bottom">
+                <h4>Vote Chess</h4>
+                <p>Vote with a team to make a move</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#FCE4EC;color:#E91E63;">👤</div>
+              <div class="card-bottom">
+                <h4>Solo Chess</h4>
+                <p>Capture pieces in the right order to win</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#F3E5F5;color:#673AB7;">🤖</div>
+              <div class="card-bottom">
+                <h4>Computer Championship</h4>
+                <p>Watch chess engines battle</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#FFFDE7;color:#FBC02D;">👑</div>
+              <div class="card-bottom">
+                <h4>Junior Academy</h4>
+                <p>Chess for young learners</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#E8EAF6;color:#3F51B5;">🛠️</div>
+              <div class="card-bottom">
+                <h4>Tools</h4>
+                <p>Useful tools for chess players</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#E0F7FA;color:#00BCD4;">👁️</div>
+              <div class="card-bottom">
+                <h4>Vision</h4>
+                <p>Train your board vision</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#FFF3E0;color:#FF9800;">🛍️</div>
+              <div class="card-bottom">
+                <h4>Shop / Merch</h4>
+                <p>Get your chess gear</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="card-top" style="background:#FFEBEE;color:#F44336;">🎁</div>
+              <div class="card-bottom">
+                <h4>Gift</h4>
+                <p>Gift a membership</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── LEADERBOARD ─────── -->
+      <section id="screen-leaderboard" class="screen">
+        <div class="page">
+          <h2>Leaderboard</h2>
+          <div class="subtitle" id="lb-you">Fetching live server rankings…</div>
+          <div class="flex-row">
+            <button class="btn small" id="lb-tab-elo" onclick="setLBTab('elo')">Highest ELO</button>
+            <button class="btn small secondary" id="lb-tab-wins" onclick="setLBTab('wins')">Most Wins</button>
+            <button class="btn small secondary" id="lb-tab-games" onclick="setLBTab('games')">Most Games</button>
+            <button class="btn small secondary" onclick="loadLeaderboard()" aria-label="Refresh leaderboard">Refresh</button>
+          </div>
+          <div id="lb-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+        </div>
+      </section>
+
+      <!-- ─────── SETTINGS ─────── -->
+      <section id="screen-settings" class="screen">
+        <div class="page">
+          <h2>Settings</h2>
+
+          <div class="card">
+            <div class="field-label">Board theme</div>
+            <div class="theme-grid" id="theme-buttons"></div>
+          </div>
+
+          <div class="card">
+            <div class="field-label">Gameplay</div>
+            <label class="switch-row"><input type="checkbox" id="pref-sound" /><span>Sound effects</span></label>
+            <label class="switch-row"><input type="checkbox" id="pref-legal" /><span>Highlight legal moves</span></label>
+            <label class="switch-row"><input type="checkbox" id="pref-last" /><span>Highlight last move</span></label>
+            <label class="switch-row"><input type="checkbox" id="pref-coords" /><span>Show coordinates</span></label>
+            <label class="switch-row"><input type="checkbox" id="pref-autopromo" /><span>Auto-promote to queen</span></label>
+            <label class="switch-row"><input type="checkbox" id="pref-confirmresign" /><span>Confirm before resigning</span></label>
+          </div>
+
+          <div class="card">
+            <div class="field-label">Account</div>
+            <div class="flex-row" style="justify-content:flex-start;">
+              <button class="btn secondary small" id="btn-settings-auth">Account / Log in</button>
+              <button class="btn secondary small" id="btn-reset-stats">Reset local stats</button>
+            </div>
+            <p class="hint-text mt-12">Piece sets (real SVG artwork) arrive in Phase 3.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────── GAME ─────── -->
+      <section id="screen-game" class="screen">
+        <div class="game-layout">
+          <div class="board-column">
+
+            <!-- Banners (draw offer / rematch / disconnect / start hint / reconnect) -->
+            <div class="banner-stack" id="banner-stack">
+              <div class="banner banner-draw" id="draw-offer-banner" hidden>
+                <span>Opponent offers a draw</span>
+                <div class="banner-actions">
+                  <button class="btn small primary" onclick="respondDraw(true)">Accept</button>
+                  <button class="btn small secondary" onclick="respondDraw(false)">Decline</button>
+                </div>
+              </div>
+              <div class="banner banner-rematch" id="rematch-banner" hidden>
+                <span>Opponent wants a rematch</span>
+                <div class="banner-actions">
+                  <button class="btn small primary" onclick="respondRematch(true)">Accept</button>
+                  <button class="btn small secondary" onclick="respondRematch(false)">Decline</button>
+                </div>
+              </div>
+              <div class="banner banner-disconnect" id="disconnect-banner" hidden>
+                <span>Opponent disconnected — game ends in <b id="disconnect-countdown">30</b> s</span>
+              </div>
+              <div class="banner banner-info" id="start-hint" hidden>
+                <span>Game starts after both players move — <b id="start-hint-count">30</b> s</span>
+              </div>
+              <div class="banner banner-info" id="reconnect-indicator" hidden>
+                <span>Reconnecting to server…</span>
+              </div>
+            </div>
+
+            <div class="player-bar" id="opponent-bar"></div>
+            <div style="display:flex;gap:8px;align-items:stretch;">
+              <div class="eval-bar-wrapper" id="eval-wrapper" style="display:none;">
+                <div class="eval-label" id="eval-label">0.0</div>
+                <div class="eval-bar-track"><div class="eval-bar-fill" id="eval-fill" style="height:50%;"></div></div>
+              </div>
+              <div class="board-container">
+                <canvas id="board"></canvas>
+              </div>
+            </div>
+            <div class="player-bar" id="player-bar"></div>
+            <div class="slim-action-row">
+              <button class="btn icon-only" onclick="flipBoard()" title="Flip board" aria-label="Flip board">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 5V1L7 6l5 5V7a6 6 0 0 1 5.2 9l1.5 1.5A8 8 0 0 0 12 5zm0 12a6 6 0 0 1-5.2-9L5.3 6.5A8 8 0 0 0 12 19v4l5-5-5-5v4z"/></svg>
+              </button>
+              <button class="btn icon-only" id="btn-hint" onclick="requestHint()" title="Hint" aria-label="Hint" style="display:none;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M9 21h6v-1H9zm3-19a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+              </button>
+              <button class="btn icon-only" onclick="exportPGN()" title="Export PGN" aria-label="Export PGN">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4L12 13.6V3zM5 19h14v2H5z"/></svg>
+              </button>
+              <button class="btn icon-only" id="btn-undo" onclick="undoMove()" title="Undo" aria-label="Undo" style="display:none;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+              </button>
+              <button class="btn icon-only" id="btn-draw" onclick="offerDraw()" title="Offer draw" aria-label="Offer draw">½</button>
+              <button class="btn icon-only" onclick="showHelp()" title="Rules" aria-label="Rules">?</button>
+            </div>
+          </div>
+
+          <div class="sidebar-column">
+            <div style="flex:1;display:flex;flex-direction:column;min-height:0;">
+              <div class="move-list-header">
+                <span id="game-mode-tag">Standard Chess</span>
+                <span style="font-size:12px;color:var(--text-dim);"><span id="move-count">0</span> ply</span>
+              </div>
+              <div class="move-list-container" id="move-list-container" tabindex="0">
+                <div class="move-table" id="move-list"></div>
+              </div>
+            </div>
+
+            <div class="chat-container" id="chat-container">
+              <div class="chat-messages" id="chat-messages"></div>
+              <div class="chat-input-row">
+                <input id="chat-input" placeholder="Type a message…" maxlength="200" onkeydown="if(event.key==='Enter')sendChat()" />
+                <button class="btn small primary" onclick="sendChat()">Send</button>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid rgba(255,255,255,.06);padding-top:12px;">
+              <button class="btn secondary" id="btn-game-draw">½ Draw</button>
+              <button class="btn secondary" id="btn-game-resign">⚑ Resign</button>
+              <button class="btn primary" onclick="newGame()">New Game</button>
+              <button class="btn secondary" onclick="showScreen('play')">Back to Play</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ══════════ MOBILE TAB BAR ══════════ -->
+  <nav class="tabbar" id="tabbar" aria-label="Main navigation">
+    <button class="tab-item" data-nav="home">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Home</span>
+    </button>
+    <button class="tab-item" data-nav="profile">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+      <span>Profile</span>
+    </button>
+    <button class="tab-item active" data-nav="play">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.53.85l10.5-6.5a1 1 0 0 0 0-1.7L9.53 4.65A1 1 0 0 0 8 5.5z"/></svg>
+      <span>Play</span>
+    </button>
+    <button class="tab-item" data-nav="puzzles">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 11H19V7a2 2 0 0 0-2-2h-4V3.5a2.5 2.5 0 0 0-5 0V5H4a2 2 0 0 0-2 2v4h1.5a2.5 2.5 0 0 1 0 5H2v4a2 2 0 0 0 2 2h4v-1.5a2.5 2.5 0 0 1 5 0V22h4a2 2 0 0 0 2-2v-4h1.5a2.5 2.5 0 0 0 0-5z"/></svg>
+      <span>Puzzles</span>
+    </button>
+    <button class="tab-item" data-nav="community">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      <span>Community</span>
+    </button>
+  </nav>
+</div>
+
+<!-- ══════════ SEARCH OVERLAY ══════════ -->
+<div class="overlay" id="search-overlay" hidden>
+  <div class="overlay-content" style="max-width:340px;text-align:center;">
+    <div class="search-spinner"></div>
+    <h3 style="margin-bottom:6px;">Finding an opponent…</h3>
+    <p class="subtitle" id="search-sub" style="margin-bottom:14px;">10 min · Standard</p>
+    <p class="mono" id="search-elapsed">0:00</p>
+    <button class="btn secondary w-full mt-12" onclick="cancelSearch()">Cancel</button>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<div id="overlay-container"></div>
+
+  <script src="js/core/constants.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/utils.js"></script>
+  <script src="js/core/audio.js"></script>
+  <script src="js/app/settings.js"></script>
+  <script src="js/app/auth.js"></script>
+  <script src="js/app/ui.js"></script>
+  <script src="js/engine/pieces.js"></script>
+  <script src="js/engine/moves.js"></script>
+  <script src="js/engine/check.js"></script>
+  <script src="js/engine/game-state.js"></script>
+  <script src="js/board/board.js"></script>
+  <script src="js/board/render.js"></script>
+  <script src="js/board/input.js"></script>
+  <script src="js/game/history.js"></script>
+  <script src="js/game/clock.js"></script>
+  <script src="js/game/game.js"></script>
+  <script src="js/network/ws.js"></script>
+  <script src="js/network/handlers.js"></script>
+  <script src="js/profile/profile.js"></script>
+  <script src="js/profile/leaderboard.js"></script>
+  <script src="js/ai/ai.js"></script>
+  <script src="js/app/init.js"></script>
+</body>
+</html>

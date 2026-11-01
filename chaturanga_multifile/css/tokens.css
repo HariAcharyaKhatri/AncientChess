@@ -1,0 +1,66 @@
+/* ══════════════════════════════════════════════════════════
+   DESIGN TOKENS — Ancient Chess Dark Mode Theme
+   ══════════════════════════════════════════════════════════ */
+:root {
+  /* Ancient Chess Brand Core Colors */
+  --bg: #302e2b;
+  --bg-panel: #262421;
+  --bg-elev: #2b2926;
+  --bg-sunken: #1f1d1b;
+
+  /* Typography Colors */
+  --text: rgba(255, 255, 255, 0.88);
+  --text-dim: rgba(255, 255, 255, 0.65);
+  --text-faint: rgba(255, 255, 255, 0.38);
+
+  /* Authentic Green Spectrum */
+  --color-green-100: #D8FA9D;
+  --color-green-200: #B2E068;
+  --color-green-300: #81B64C;
+  --color-green-400: #5D9948;
+  --color-green-500: #45753C;
+
+  /* Primary Brand Mapping */
+  --green: #81b64c;
+  --green-hi: #94c85c;
+  --green-dark: #45753c;
+
+  /* Buttons */
+  --btn-bg: #3c3a38;
+  --btn-hover: #4a4846;
+  --btn-edge: #26241f;
+
+  /* Accents & Status */
+  --blue: #3b82f6;
+  --blue-dark: #1e3a8a;
+  --danger: #e04b4b;
+  --danger-dark: #a63232;
+
+  /* Geometry & Elevation */
+  --radius: 8px;
+  --radius-sm: 6px;
+  --radius-lg: 12px;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.55);
+
+  /* Typography */
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", "SF Mono", "Cascadia Code", ui-monospace, Menlo, Consolas, monospace;
+
+  /* Layout Measurements */
+  --sidebar-w: 216px;
+  --topbar-h: 56px;
+  --tabbar-h: 58px;
+
+  /* Authentic Board Palette */
+  --board-light: #ebecd0;
+  --board-dark: #739552;
+
+  /* Highlight & Arrow Markers */
+  --color-board-arrow-green: rgba(159, 207, 63, 0.64);
+  --color-board-arrow-blue: rgba(72, 193, 249, 0.64);
+  --color-board-arrow-orange: rgba(255, 170, 0, 0.64);
+  --color-board-arrow-red: rgba(248, 85, 63, 0.64);
+  --color-board-square-yellow: rgba(255, 255, 0, 0.5);
+  --color-board-square-hint: rgba(13, 170, 165, 0.5);
+}
